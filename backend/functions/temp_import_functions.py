@@ -12,7 +12,7 @@ def  import_streams_temp(id, username):
     user = models.User.objects.get(username=username)
 
 
-    with open(os.path.join(sys.path[0], f"/home/mats/rootnote/SITE_CODE/backend/functions/data/endsong_temporary/StreamingHistory{id}.json"), "r", encoding="utf8") as f:
+    with open(os.path.join(sys.path[0], f"/home/mats/rootnote/mysite/backend/functions/data/endsong_temporary/StreamingHistory{id}.json"), "r", encoding="utf8") as f:
         songs = json.load(f)
 
         for index, song in enumerate(songs):
@@ -78,7 +78,7 @@ def genenate_streams_from_temp_import(id=id):
 
     master_dict = {}
 
-    with open(os.path.join(sys.path[0], f"/home/mats/rootnote/SITE_CODE/backend/functions/data/endsong_temporary/StreamingHistory{id}.json"), "r", encoding="utf8") as f:
+    with open(os.path.join(sys.path[0], f"/home/mats/rootnote/mysite/backend/functions/data/endsong_temporary/StreamingHistory{id}.json"), "r", encoding="utf8") as f:
         songs = json.load(f)
 
         for index, song in enumerate(songs):
